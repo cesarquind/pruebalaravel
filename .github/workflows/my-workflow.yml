@@ -1,0 +1,19 @@
+name: Mi Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+
+      - name: Ejecutar comandos
+        run: |
+          echo "Hola, este es un workflow básico."
+          echo "Puedes agregar más pasos aquí."
